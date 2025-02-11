@@ -69,3 +69,8 @@ When adding links and scripts to an HTML file, follow this sequence:
 ---
 
 ### Follow these guidelines to maintain a clean and organized project structure.
+
+### Reference Code for better understanding
+
+- [Reference Code](https://github.com/rahul-3-real/uptown-realm)
+- [Reference Code](https://github.com/rahul-3-real/hermanos-interview-project)
