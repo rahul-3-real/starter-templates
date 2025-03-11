@@ -1,0 +1,105 @@
+@use "../abstract/variables" as var;
+
+.d-flex {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.align- {
+  &start {
+    align-items: flex-start !important;
+  }
+  &end {
+    align-items: flex-end !important;
+  }
+  &center {
+    align-items: center !important;
+  }
+  &stretch {
+    align-items: stretch !important;
+  }
+}
+
+.justify- {
+  &start {
+    justify-content: flex-start !important;
+  }
+  &end {
+    justify-content: flex-end !important;
+  }
+  &center {
+    justify-content: center !important;
+  }
+  &between {
+    justify-content: space-between !important;
+  }
+  &around {
+    justify-content: space-around !important;
+  }
+}
+
+.flex- {
+  &row {
+    flex-direction: row !important;
+  }
+  &row-reverse {
+    flex-direction: row-reverse !important;
+  }
+  &column {
+    flex-direction: column !important;
+  }
+  &column-reverse {
+    flex-direction: column-reverse !important;
+  }
+}
+
+// Column
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+  }
+
+  // Large Screens (lg)
+  @media (max-width: 992px) {
+    @for $i from 1 through 12 {
+      .col-lg-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Medium screens (md)
+  @media (max-width: 992px) {
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Small screens (sm)
+  @media (max-width: 768px) {
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Extra small screens (xs)
+  @media (max-width: 576px) {
+    @for $i from 1 through 12 {
+      .col-xs-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+}
